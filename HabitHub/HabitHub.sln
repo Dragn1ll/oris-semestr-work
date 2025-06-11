@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HabitHub", "HabitHub\HabitHub.csproj", "{586DB624-7649-4D2B-BF92-B8DC0B86D113}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{F433EE15-00CE-4ADB-8937-7380E0230521}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{C3ADFD43-9A3F-400B-A03B-7255A1A40B06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{37640853-8F76-40F2-A8AA-EEB13D2C2E9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{B3591C75-5619-4821-B17D-B369E2DA8963}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DC1A0792-C6BB-4443-ADB3-B12F3CC69C2D}"
+	ProjectSection(SolutionItems) = preProject
+		.env = .env
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HabitHubTests", "HabitHubTests\HabitHubTests.csproj", "{5373C3AA-D6F2-4FD5-94D3-6AE703972061}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{586DB624-7649-4D2B-BF92-B8DC0B86D113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{586DB624-7649-4D2B-BF92-B8DC0B86D113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{586DB624-7649-4D2B-BF92-B8DC0B86D113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{586DB624-7649-4D2B-BF92-B8DC0B86D113}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F433EE15-00CE-4ADB-8937-7380E0230521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F433EE15-00CE-4ADB-8937-7380E0230521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F433EE15-00CE-4ADB-8937-7380E0230521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F433EE15-00CE-4ADB-8937-7380E0230521}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3ADFD43-9A3F-400B-A03B-7255A1A40B06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3ADFD43-9A3F-400B-A03B-7255A1A40B06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3ADFD43-9A3F-400B-A03B-7255A1A40B06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3ADFD43-9A3F-400B-A03B-7255A1A40B06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37640853-8F76-40F2-A8AA-EEB13D2C2E9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37640853-8F76-40F2-A8AA-EEB13D2C2E9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37640853-8F76-40F2-A8AA-EEB13D2C2E9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37640853-8F76-40F2-A8AA-EEB13D2C2E9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3591C75-5619-4821-B17D-B369E2DA8963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3591C75-5619-4821-B17D-B369E2DA8963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3591C75-5619-4821-B17D-B369E2DA8963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3591C75-5619-4821-B17D-B369E2DA8963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5373C3AA-D6F2-4FD5-94D3-6AE703972061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5373C3AA-D6F2-4FD5-94D3-6AE703972061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5373C3AA-D6F2-4FD5-94D3-6AE703972061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5373C3AA-D6F2-4FD5-94D3-6AE703972061}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
