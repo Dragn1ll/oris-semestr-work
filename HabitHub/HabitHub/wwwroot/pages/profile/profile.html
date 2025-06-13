@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>HabitHub — Профиль пользователя</title>
+    <link rel="stylesheet" href="/pages/profile/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="/main" class="logo">HabitHub</a>
+        <div class="nav-links">
+            <a href="/profile" id="nav-profile-link">Мой профиль</a>
+            <a href="/habits">Привычки</a>
+            <a href="/chats">Чаты</a>
+            <a href="/main">Лента постов</a>
+        </div>
+        <button id="nav-logout-btn">Выйти</button>
+    </div>
+</nav>
+
+<div class="container" style="margin-top: 20px;">
+    <div class="profile-header">
+        <div>
+            <div class="profile-name" id="profile-name">Загрузка...</div>
+            <div id="profile-birthday"></div>
+            <div id="profile-status"></div>
+        </div>
+    </div>
+
+    <div class="profile-stats">
+        <div class="stat-item">
+            <div class="stat-value" id="posts-count">0</div>
+            <div class="stat-label">Посты</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value" id="likes-count">0</div>
+            <div class="stat-label">Лайки</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value" id="comments-count">0</div>
+            <div class="stat-label">Комментарии</div>
+        </div>
+    </div>
+
+    <div id="profile-actions"></div>
+    <div id="telegram-info" style="display: none;">
+        <h3>Подключение Telegram</h3>
+        <p>Чтобы получать уведомления:</p>
+        <ol>
+            <li>Перейдите к нашему боту: <a id="telegram-link" href="https://t.me/habit_hub_bot" target="_blank">@habit_hub_bot</a></li>
+            <li>Отправьте ему команду: <code>/start</code></li>
+            <li>Затем отправьте ваш ID: <div class="user-id-display" id="telegram-user-id"></div></li>
+        </ol>
+    </div>
+
+    <h2>Посты пользователя</h2>
+    <div id="post-feed"></div>
+</div>
+
+<div class="modal" id="edit-profile-modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Редактировать профиль</h3>
+            <button class="close-modal">&times;</button>
+        </div>
+        <form id="edit-profile-form">
+            <div class="form-group">
+                <label for="edit-name">Имя</label>
+                <input type="text" id="edit-name" required>
+            </div>
+            <div class="form-group">
+                <label for="edit-surname">Фамилия</label>
+                <input type="text" id="edit-surname" required>
+            </div>
+            <div class="form-group">
+                <label for="edit-patronymic">Отчество</label>
+                <input type="text" id="edit-patronymic">
+            </div>
+            <div class="form-group">
+                <label for="edit-status">Статус</label>
+                <input type="text" id="edit-status">
+            </div>
+            <div class="form-group">
+                <label for="edit-birthday">Дата рождения</label>
+                <input type="date" id="edit-birthday" required>
+            </div>
+            <div class="form-actions">
+                <button type="button" class="close-modal">Отмена</button>
+                <button type="submit">Сохранить</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal" id="add-post-modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Добавить пост</h3>
+            <button class="close-modal">&times;</button>
+        </div>
+        <form id="add-post-form">
+            <div class="form-group">
+                <label for="post-habit">Привычка</label>
+                <select id="post-habit" required>
+                    <option value="">Загрузка привычек...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="post-text">Текст поста</label>
+                <textarea id="post-text" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="post-media">Медиафайлы</label>
+                <input type="file" id="post-media" multiple>
+            </div>
+            <div class="form-actions">
+                <button type="button" class="close-modal">Отмена</button>
+                <button type="submit" class="close-modal">Опубликовать</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal" id="confirm-modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 id="confirm-title">Подтверждение</h3>
+            <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p id="confirm-message"></p>
+        </div>
+        <div class="form-actions">
+            <button type="button" class="close-modal">Отмена</button>
+            <button type="button" class="close-modal">Подтвердить</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="first-message-modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Написать сообщение</h3>
+            <button class="close-modal">&times;</button>
+        </div>
+        <form id="first-message-form">
+            <div class="form-group">
+                <label for="first-message-text">Ваше сообщение:</label>
+                <textarea id="first-message-text" placeholder="Привет! Я хотел бы с вами пообщаться" required></textarea>
+            </div>
+            <div class="form-actions">
+                <button type="button" class="close-modal">Отмена</button>
+                <button type="submit">Отправить</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="notification" id="notification"></div>
+<script src="/pages/profile/profile.js"></script>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.min.js"></script>
+</body>
+</html>

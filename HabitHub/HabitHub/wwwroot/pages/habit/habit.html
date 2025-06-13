@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>HabitHub — Привычки пользователя</title>
+    <link rel="stylesheet" href="/pages/habit/styles.css" />
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="/main" class="logo">HabitHub</a>
+        <div class="nav-links">
+            <a href="/profile" id="profile-link">Мой профиль</a>
+            <a href="/habits" class="active">Привычки</a>
+            <a href="/chats">Чаты</a>
+            <a href="/main">Лента постов</a>
+        </div>
+        <button id="logout-btn">Выйти</button>
+    </div>
+</nav>
+
+<div class="container" style="margin-top: 20px;">
+    <div class="center-btn">
+        <button id="toggleFormBtn">Добавить привычку</button>
+    </div>
+
+    <form id="habitForm" class="hidden">
+        <label>Тип привычки:
+            <select id="habitType"></select>
+            <div id="typeError" class="error"></div>
+        </label>
+
+        <div id="physicalActivitySection" class="hidden">
+            <label>Подтип активности:
+                <select id="physicalActivityType"></select>
+                <div id="subtypeError" class="error"></div>
+            </label>
+        </div>
+
+        <label>Цель:
+            <input type="text" id="habitGoal" />
+            <div id="goalError" class="error"></div>
+        </label>
+
+        <button type="button" id="submitHabit">Сохранить</button>
+    </form>
+
+    <div id="habitList" class="habit-list"></div>
+</div>
+
+<div id="modal-overlay" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 id="modal-title">Заголовок</h3>
+        </div>
+        <div class="modal-body">
+            <p id="modal-message">Сообщение</p>
+        </div>
+        <div class="modal-footer">
+            <button id="modal-ok" class="modal-btn primary">OK</button>
+        </div>
+    </div>
+</div>
+
+<div id="notification-container" style="position: fixed; top: 20px; right: 20px; z-index: 3000;"></div>
+
+<script src="/pages/habit/habit.js"></script>
+</body>
+</html>

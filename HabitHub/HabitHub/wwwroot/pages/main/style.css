@@ -1,0 +1,209 @@
+body {
+    background-color: #111;
+    color: #FFD700;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+#refresh-btn {
+    display: block;
+    margin: 0 auto 20px auto; /* сверху 0, снизу 20px */
+    border-radius: 12px; /* скругление кнопки */
+    background-color: #FFD700;
+    color: #111;
+    padding: 8px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+#refresh-btn:hover {
+    background-color: #e6c200;
+}
+
+/* Кнопки */
+button {
+    border-radius: 12px; /* скругление всех кнопок */
+    background-color: #FFD700;
+    border: none;
+    color: #111;
+    padding: 6px 12px;
+    margin: 5px 5px 5px 0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e6c200;
+}
+
+/* Посты — чуть меньше отступы между ними */
+.post-item {
+    background-color: #222;
+    border: 1px solid #FFD700;
+    padding: 15px;
+    margin-bottom: 15px; /* раньше было 20px */
+    border-radius: 8px;
+}
+
+.post-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.post-text {
+    margin-bottom: 10px;
+}
+
+.post-media {
+    margin-top: 10px;
+}
+
+.post-media img {
+    max-width: 100%;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #333;
+    padding: 10px; /* чуть побольше padding */
+    margin-top: 5px;
+    border-radius: 8px;
+    position: relative;
+    color: #FFD700;
+}
+
+/* Кнопка удаления комментария */
+li button.delete-comment {
+    position: absolute;
+    right: 8px;
+    top: 5px;
+    background-color: #b22222; /* темно-красный */
+    color: white;
+    border-radius: 8px;
+    padding: 2px 6px;
+    font-size: 0.9em;
+}
+
+/* Поле ввода комментария - сделаем крупнее и в темной стилистике */
+input[type="text"], input[type="search"], input:not([type]) {
+    width: 70%;
+    padding: 10px 15px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 12px;
+    border: 1px solid #555;
+    background-color: #222;
+    color: #FFD700;
+    font-size: 1em;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="search"]:focus, input:not([type]):focus {
+    border-color: #FFD700;
+}
+
+/* Сделаем кнопки "Отправить" рядом с полем комментария */
+div.comment-section {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.user-profile-link {
+    color: #FFD700;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.user-profile-link:hover {
+    color: #e6c200;
+    text-decoration: none;
+}
+
+.navbar {
+    background-color: #1a1a1a;
+    border-bottom: 2px solid #FFD700;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #FFD700;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #333;
+    color: #FFD700;
+}
+
+.nav-links a.active {
+    background-color: gray;
+    color: #FFD700;
+}
+
+#logout-btn {
+    background-color: #caae15;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#logout-btn:hover {
+    background-color: #caae15;
+}
